@@ -1,6 +1,7 @@
 
 import './App.css';
 import CartPage from './Pages/CartPage';
+import Checkout from './Pages/Checkout';
 import LoginPage from './Pages/LoginPage';
 import SignupPage from './Pages/SignupPage';
 import Navbar from './features/navbar/Navbar';
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "cart",
     element: (<Link to="/cart"><CartPage/></Link>),
+  },
+  {
+    path: "checkout",
+    element: (<Link to="/checkout"><Checkout/></Link>),
   },
 ]);
 
