@@ -1,5 +1,6 @@
 
 import './App.css';
+import CartPage from './Pages/CartPage';
 import LoginPage from './Pages/LoginPage';
 import SignupPage from './Pages/SignupPage';
 import Navbar from './features/navbar/Navbar';
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "login",
     element: (<Link to="/login"><LoginPage/></Link>),
+  },
+  {
+    path: "cart",
+    element: (<Link to="/cart"><CartPage/></Link>),
   },
 ]);
 
