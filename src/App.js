@@ -5,7 +5,7 @@ import Checkout from './Pages/Checkout';
 import LoginPage from './Pages/LoginPage';
 import SignupPage from './Pages/SignupPage';
 import Navbar from './features/navbar/Navbar';
-import Product from './features/product-list/Product';
+
 
 
 import {
@@ -14,6 +14,8 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import Product from './features/product-list/components/Product';
+import ProductDetailsPage from './Pages/ProductDetailsPage';
 
 const router = createBrowserRouter([
   {
@@ -22,19 +24,23 @@ const router = createBrowserRouter([
   },
   {
     path: "signup",
-    element: (<Link to="/signup"><SignupPage/></Link>),
+    element: (<Link to="/signup"><Navbar/><SignupPage/></Link>),
   },
   {
     path: "login",
-    element: (<Link to="/login"><LoginPage/></Link>),
+    element: (<Link to="/login"><Navbar/><LoginPage/></Link>),
   },
   {
     path: "cart",
-    element: (<Link to="/cart"><CartPage/></Link>),
+    element: (<Link to="/cart"><Navbar/><CartPage/></Link>),
   },
   {
     path: "checkout",
-    element: (<Link to="/checkout"><Checkout/></Link>),
+    element: (<Link to="/checkout"><Navbar/><Checkout/></Link>),
+  },
+  {
+    path: "productDetails",
+    element: (<Link to="/productDetails"><Navbar/><ProductDetailsPage/></Link>),
   },
 ]);
 
