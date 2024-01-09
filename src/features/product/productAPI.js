@@ -1,6 +1,6 @@
-export function productAPI(amount = 1) {
+export function fechAllProducts() {
     return new Promise(async (resolve) =>{
-      const response = await fetch('http://') 
+      const response = await fetch('http://localhost:8080/products') 
       const data = await response.json()
       resolve({data})
     }
