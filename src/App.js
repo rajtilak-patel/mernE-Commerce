@@ -6,13 +6,9 @@ import LoginPage from './Pages/LoginPage';
 import SignupPage from './Pages/SignupPage';
 import Navbar from './features/navbar/Navbar';
 
-
-
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
 } from "react-router-dom";
 import Product from './features/product/components/Product';
 import ProductDetailsPage from './Pages/ProductDetailsPage';
@@ -20,27 +16,27 @@ import ProductDetailsPage from './Pages/ProductDetailsPage';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (<Link to="/"><Navbar/><Product/></Link>)
+    element: (<div><Navbar/><Product/></div>)
   },
   {
     path: "signup",
-    element: (<Link to="/signup"><Navbar/><SignupPage/></Link>),
+    element: (<div><Navbar/><SignupPage/></div>),
   },
   {
     path: "login",
-    element: (<Link to="/login"><Navbar/><LoginPage/></Link>),
+    element: (<div><Navbar/><LoginPage/></div>),
   },
   {
     path: "cart",
-    element: (<Link to="/cart"><Navbar/><CartPage/></Link>),
+    element: (<div><Navbar/><CartPage/></div>),
   },
   {
     path: "checkout",
-    element: (<Link to="/checkout"><Navbar/><Checkout/></Link>),
+    element: (<div><Navbar/><Checkout/></div>),
   },
   {
     path: "productDetails",
-    element: (<Link to="/productDetails"><Navbar/><ProductDetailsPage/></Link>),
+    element: (<div><Navbar/><ProductDetailsPage/></div>),
   },
 ]);
 
